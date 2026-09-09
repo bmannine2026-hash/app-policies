@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TikTok OAuth Callback</title>
+<style>body{font-family:sans-serif;max-width:600px;margin:60px auto;padding:0 20px;line-height:1.6}
+code{background:#eee;padding:8px;display:block;word-break:break-all;margin:10px 0;border-radius:4px}</style>
+</head>
+<body>
+<h2>TikTok authorization complete</h2>
+<p>Copy the code below and paste it back to Jarvis:</p>
+<code id="code">(reading...)</code>
+<script>
+const params = new URLSearchParams(window.location.search);
+document.getElementById("code").textContent = params.get("code") || "(no code found in URL — check for an error param instead)";
+</script>
+</body>
+</html>
